@@ -172,28 +172,30 @@ form img {
 
 .checkbox_login-link {
   display: flex;
-  align-items: center;
-  gap: 33px;
+  justify-content: space-between; 
+  align-items: center; 
+  width: 100%; 
+  margin-top: 16px;
 }
 
 .remember-me {
   display: flex;
-  width: 208px;
-  align-items: center;
+  width: auto;
+  align-items: right;
   gap: 2px;
 }
 
 .remember-me input {
-  width: 28px;
-  height: 28px;
+  width: 16px;
+  height: 16px;
   background-color: #0000001A;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 .remember-me label {
   color: #000000;
   font-weight: 400;
-  font-style: 16px;
+  font-style: 10px;
   line-height: 20px;
   letter-spacing: -1%;
 }
@@ -201,11 +203,18 @@ form img {
 .checkbox_login-link .login {
   display: flex;
   align-items: center;
-  height: 48px;
+  height: 10px;
   gap: 8px; 
+}
+.login{
+  display: flex;
+  align-items: right;
+  gap: 8px;
+
 }
 
 .login a {
+  align-items: right;
   color: #000000;
   font-size: 16px;
   font-weight: 500;
