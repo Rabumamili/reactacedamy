@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service Panel</title>
+
+    <!-- Import Material Icons and DM Sans Font -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body {
+        font-family: "DM Sans", sans-serif;
+      }
+      .custom-gradient {
+        background: linear-gradient(67.75deg, #ffffff 19.18%, #ffebe7 75.31%);
+      }
+      :root {
+        --Background-Brand-Orange-100: #ff5634;
+        --Background-Semantic-Red-100: #e10e0e;
+      }
+      /* Scrollbar Styling */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #000;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #000;
+    }
+    /* Sidebar hidden in fullscreen mode */
+body:fullscreen .md\:w-auto {
+  display: none;
+}
+
+body:fullscreen .md\:flex {
+  display: none;
+}
+
+    </style>
+  </head>
+  <body class="custom-gradient h-auto gap-0 w-full top-[83px] left-[3835px] gap-0 h-screen">
+    <div class="flex flex-col md:flex-row w-full">
+      <!-- Sidebar -->
+      <div class="md:w-auto w-full h-auto max-h-[96px] md:h-screen rounded-full md:bg-none bg-white flex justify-between p-2 md:p-4 flex-row md:flex-col items-center">
+        <div class="bg-white text-2xl font-bold rounded-full flex items-center justify-center">
+          <img src="./img/logo.png" alt="Logo" class="w-12 h-12 object-contain" />
+        </div>
+
+        <!-- Sidebar Links -->
+        <div class="w-auto h-auto gap-2 p-2 rounded-full bg-black text-white hidden md:flex flex-col space-y-4 bg-black p-3">
+          <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center">
+            <img src="./img/Vector.png" alt="" />
+          </div>
+          <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center">
+            <img src="./img/Vector (1).png" alt="" />
+          </div>
+          <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center">
+            <img src="./img/Vector (2).png" alt="" />
+          </div>
+          <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center">
+            <img src="./img/Vector (3).png" alt="" />
+          </div>
+          <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center">
+            <img src="./img/Vector (4).png" alt="" />
+          </div>
+          <div class="w-10 h-10 bg-[var(--Background-Brand-Orange-100)] rounded-full relative flex items-center justify-center">
+            <img src="./img/Vector (5).png" alt="" />
+            <span class="absolute -top-1 -right-1 bg-[var(--Background-Semantic-Red-100)] text-white w-4 h-4 min-w-4 gap-0 rounded-full pt-0 pr-1 pb-0 pl-1 border-2 border-black text-xs flex items-center justify-center">1</span>
+          </div>
+        </div>
+
+        <!-- Profile Section -->
+        <div class="gap-2 p-2 rounded-full bg-white flex md:flex-col flex-row">
+          <div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden">
+            <img src="./img/ellipse.png" alt="" class="w-full h-full object-cover" />
+          </div>
+          <div class="w-12 h-12 bg-gray-200 rounded-full relative flex items-center justify-center">
+            <img src="./img/Vector7.png" alt="" />
+            <span class="absolute -top-1 -right-0 bg-[var(--Background-Semantic-Red-100)] text-white text-xs border-2 w-4 h-4 flex items-center justify-center rounded-full"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="flex flex-grow flex-col h-screen gap-4 pr-4">
+        <!-- Order Status -->
+        <div>
+          <div class="flex justify-between pt-6 pr-4 pb-6">
+            <h2 class="font-bold text-[32px] leading-[40px] tracking-[3%] font-sans">Order Status</h2>
+            <div class="flex items-center justify-center border-black/10 border-2 p-2 gap-2 rounded-full" id="fullscreen-btn">
+              <img src="./img/image.png" alt="" class="w-2.5 h-2.5">Full Screen</div>          
+          </div>
+      <div>
+        <div class="flex justify-between items-center rounded-full p-4 rounded-lg bg-[#0000000D] mb-[16px]">
+            <div class="flex justify-center items-center w-[184px] h-[60px] gap-4">
+                <img src="./img/macdonald.png" alt="" class="w-[60px] h-[60px] rounded-[3px]">
+                <p class="font-sans font-medium text-[20px] leading-[24px] tracking-[-1%]">McDonald's</p>
+            </div>
+            <div>
+                <h1 class="font-sans font-bold text-[32px] leading-[40px] tracking-[-3%]">21:30</h1>
+            </div>
+        </div>
+      </div>
+          <!-- Transaction Cards -->
+          <div class="flex gap-4 flex-row flex-1 mb-0">
+            <div class="bg-white p-4 rounded-lg shadow-md max-h-[380px] h-full overflow-scroll scrollbar-thin scrollbar-thumb-red-500 scrollbar-track-black flex flex-col w-full md:w-3/5">
+              <h2 class="font-bold text-3xl leading-[40px] tracking-[-3%] text-center p-[24px]">Preparing</h2>
+              <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 h-full">
+                <!-- Sample Data -->
+                <div class="bg-black/10 p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-black/10 p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-black/10 p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-black/10 p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-black/10 p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-black/10 p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-black/10 p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-black/10 p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-black/10 p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-black/10 p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-black/10 p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-black/10 p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-black/10 p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-black/10 p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-black/10 p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-black/10 p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-black/10 p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-black/10 p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-black/10 p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-black/10 p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-black/10 p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-black/10 p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-black/10 p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-black/10 p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-black/10 p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-black/10 p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-black/10 p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-black/10 p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-black/10 p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-black/10 p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-black/10 p-4 rounded-lg text-center font-font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>    
+              </div>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow-md max-h-[380px] overflow-y-auto flex flex-col w-full md:w-2/5">
+              <h2 class="font-bold text-center text-3xl leading-[40px] tracking-[-3%] p-[24px]">Ready</h2>
+              <div class="bg-green-600 text-white py-8 px-6 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em] mb-2">3885</div>
+              <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+                <div class="bg-green-600 text-white p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-green-600 text-white p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-green-600 text-white p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-green-600 text-white p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-green-600 text-white p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-green-600 text-white p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-green-600 text-white p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-green-600 text-white p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-green-600 text-white p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-green-600 text-white p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-green-600 text-white p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-green-600 text-white p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-green-600 text-white p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-green-600 text-white p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+                <div class="bg-green-600 text-white p-4 rounded-lg text-center font-dm-sans font-bold text-2xl leading-8 tracking-[-0.02em]">3885</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Navigation (Mobile) -->
+      <div class="w-auto h-auto gap-2 p-2 rounded-full bg-black text-white fixed bottom-3 left-1/2 transform -translate-x-1/2 p-3 rounded-full flex space-x-4 md:hidden" id="navbar">
+        <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center">
+          <img src="./img/Vector.png" alt="" />
+        </div>
+        <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center">
+          <img src="./img/Vector (1).png" alt="" />
+        </div>
+        <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center">
+          <img src="./img/Vector (2).png" alt="" />
+        </div>
+        <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center">
+          <img src="./img/Vector (3).png" alt="" />
+        </div>
+        <div class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center">
+          <img src="./img/Vector (4).png" alt="" />
+        </div>
+        <div class="w-10 h-10 bg-[var(--Background-Brand-Orange-100)] rounded-full relative flex items-center justify-center">
+          <img src="./img/Vector (5).png" alt="" />
+          <span class="absolute -top-1 -right-1 bg-[var(--Background-Semantic-Red-100)] text-white w-4 h-4 min-w-4 gap-0 rounded-full pt-0 pr-1 pb-0 pl-1 border-2 border-black text-xs flex items-center justify-center">1</span>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const fullscreenBtn = document.getElementById('fullscreen-btn');
+    const sidebar = document.querySelector('.md\\:w-auto');
+    const navbar = document.getElementById('navbar')
+  
+    // Function to toggle sidebar visibility
+    function toggleSidebar() {
+      if (sidebar.classList.contains('hidden')) {
+        sidebar.classList.remove('hidden'); 
+        navbar.classList.remove('hidden'); 
+      } else {
+        sidebar.classList.add('hidden'); 
+        navbar.classList.add('hidden');    
+      }
+    }
+  
+    fullscreenBtn.addEventListener('click', () => {
+      toggleSidebar(); 
+    });
+  </script>
+  
+  
+</html>
