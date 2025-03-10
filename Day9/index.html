@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plan Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="font-sans bg-white font-metropolis">
+    <!-- Header -->
+    <header class="px-4 py-4 md:px-[50px] shadow-md bg-white">
+      <div class="container mx-auto flex items-center justify-between">
+        <!-- Mobile Menu Icon -->
+        <button id="menu-toggle" class="md:hidden">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+
+        <!-- Logo -->
+        <div class="text-xl font-bold text-black flex items-center">
+          <img src="./img/logo.png" alt="Logo" class="w-8 h-8 mr-2" />
+          Orderific
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-6">
+          <a href="#" class="text-gray-700">Home</a>
+          <a href="#" class="text-gray-700">Features</a>
+          <a href="#" class="text-gray-700">Pricing</a>
+          <a href="#" class="text-gray-700">About Us</a>
+          <a href="#" class="text-gray-700">Contact</a>
+        </nav>
+        <div class="hidden md:flex items-center space-x-6">
+            <!-- Flag Icon -->
+          <img src="./img/image.png" alt="Country Flag" class="w-6 h-4" />
+
+          <!-- Log in Link -->
+          <a
+            href="#"
+            class="text-gray-700 boder-gray-700 border-2 p-2 rounded-md"
+            >Log in</a
+          >
+
+          <!-- Start for Free Button -->
+          <a href="#" class="bg-[#FF5634] text-white px-4 py-2 rounded-md"
+            >Start for Free</a
+          >
+        </div>
+      </div>
+
+      <!-- Mobile Navigation (Hidden by Default) -->
+      <nav
+        id="mobile-menu"
+        class="hidden md:hidden bg-white flex flex-col shadow-md absolute w-full left-0 top-16 p-4 space-y-4"
+      >
+        <a href="#" class="text-gray-700">Home</a>
+        <a href="#" class="text-gray-700">Features</a>
+        <a href="#" class="text-gray-700">Pricing</a>
+        <a href="#" class="text-gray-700">About Us</a>
+        <a href="#" class="text-gray-700">Contact</a>
+        <img src="./img/image.png" alt="Country Flag" class="w-6 h-4" />
+        <a
+          href="#"
+          class="bg-[#FF5634] text-white px-4 py-2 rounded-md text-center"
+          >Start for Free</a
+        >
+        <a href="#" class="text-gray-700 text-center">Log in</a>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="w-full container mx-auto py-6 flex flex-col lg:flex-row gap-6 md:gap-[100px] md:px-[50px] justify-center items-center lg:items-start">
+        <div class="flex-1 py-6 px-4 md:px-0">
+          <h1 class="text-3xl font-bold">Free Plan</h1>
+          <p class="text-gray-600 mt-2 font-metropolis font-normal text-lg leading-7 tracking-normal">
+            Feugiat elit imperdiet enim pellentesque nibh bibendum lacinia pulvinar justo cursus ultricies adipiscing risus porta scelerisque at ipsum.
+          </p>
+      
+          <section class="mt-6">
+            <h2 class="text-xl font-bold">What's included in the plan?</h2>
+            <p class="text-gray-600 mt-2 font-metropolis font-normal text-lg leading-7 tracking-normal">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit lobortis arcu enim urna <span class="text-[#FF5634] font-medium">adipiscing praesent</span> velit viverra sit semper lorem eu cursus vel hendrerit elementum morbi curabitur etiam nibh justo lorem aliquet donec sed sit mi dignissim at ante massa mattis.
+            </p>
+          </section>
+      
+          <section class="mt-6">
+            <h2 class="text-xl font-bold">Is this the right plan for my restaurant?</h2>
+            <p class="text-gray-600 mt-2 font-metropolis font-normal text-lg leading-7 tracking-normal">
+              Vitae congue eu consequat ac felis placerat vestibulum lectus mauris ultrices cursus sit amet dictum sit amet justo donec enim diam porttitor lacus luctus accumsan tortor posuere praesent tristique magna sit amet purus gravida quis blandit turpis.
+            </p>
+          </section>
+        </div>
+      
+        <!-- Sidebar (For larger screens) -->
+        <aside class="bg-white md:mt-8 p-6 shadow-lg rounded-lg w-[390px] pt-[83px] pb-[50px] pl-[30px] pr-[33px] rounded-[24px] border border-[1px]">
+          <div class="flex items-center gap-4">
+            <img src="./img/bike.png" alt="" class="w-[66.22px] h-[51.27px]"/>
+            <div>
+              <h3 class="text-gray-500 text-xl font-bold">FREE</h3>
+              <p class="text-2xl font-bold">$0/mo</p>
+            </div>
+          </div>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure dolores velit temporibus libero.
+          </p>
+          <button class="mt-4 bg-[#FF5634] text-white px-4 py-2 rounded w-full">
+            Get Started
+          </button>
+          <ul class="mt-4 text-gray-700 space-y-2 font-metropolis font-medium text-[18px] leading-[20px] tracking-[0%]">
+            <li><span class="text-[#FF5634] pr-2">&#10003;</span> Single Location (30 tables limit)</li>
+            <li><span class="text-[#FF5634] pr-2">&#10003;</span> Mobile Order & Pay</li>
+            <li><span class="text-[#FF5634] pr-2">&#10003;</span> Split the Bill</li>
+            <li><span class="text-[#FF5634] pr-2">&#10003;</span> Delivery & Pickup</li>
+            <li><span class="text-[#FF5634] pr-2">&#10003;</span> Directory</li>
+            <li><span class="text-[#FF5634] pr-2">&#10003;</span> Limited Customisable</li>
+            <li><span class="text-[#FF5634] pr-2">&#10003;</span> Website Builder Basic</li>
+            <li><span class="text-[#FF5634] pr-2">&#10003;</span> Kitchen Printer Integration</li>
+            <li><span class="text-[#FF5634] pr-2">&#10003;</span> Gratuities (Tips)</li>
+          </ul>
+        </aside>
+      </main>      
+    <section class="md:px-[50px] mt-12 border-t border-[#CACACA] px-4">
+      <div
+        class="container mx-auto flex flex-col md:flex-row justify-between items-center"
+      >
+        <div class="flex flex-col space-x-4 mt-[50px] md:mt-0">
+          <div class="text-xl font-bold text-black flex items-center mr-4 md:mr-0">
+            <img src="./img/logo.png" alt="Logo" class="w-8 h-8 mr-2" />
+            Orderific
+          </div>
+          <p class="text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor incididunt ut.
+          </p>
+        </div>
+        <div class="flex space-x-4 mt-[20px] md:mt-[50px] mb-[50px] md:pl-200">
+          <button class="bg-[#FF5634] text-white px-4 py-2 rounded">
+            <i class="fab fa-apple pr-2"></i>Download for iOS
+          </button>
+          <button class="bg-[#FF5634] text-white px-4 py-2 rounded">
+            <i class="fab fa-android pr-2"></i>Download for Android
+          </button>
+        </div>
+      </div>
+      <hr class="border-t border-[#CACACA]">
+      <div class="container mx-auto mt-6 grid grid-cols-1 grid-cols-3 mt-[50px] mb-[50px]">
+        <div>
+          <h3 class="font-bold">Menu</h3>
+          <div class="flex flex-col md:flex-row md:gap-[30px]">
+            <ul class="text-gray-600 space-y-1">
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>Blog</li>
+                <li>Blog posts</li>
+              </ul>
+              <ul class="text-gray-600 space-y-1">
+                <li>plans</li>
+                <li>plan single</li>
+                <li>register</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <h3 class="font-bold">Utility pages</h3>
+          <ul class="text-gray-600 space-y-1">
+            <li>Start here</li>
+            <li>Styleguide</li>
+            <li>Password protected</li>
+            <li>404 Not found</li>
+            <li>Licenses</li>
+            <li>Changelog</li>
+            <li class="text-[#FF5634] underline">Browse More Templates</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold">Available in</h3>
+          <div class="flex flex-col md:flex-row md:justify-between">
+            <ul class="text-gray-600 space-y-1">
+                <li>
+                  <img
+                    src="./img/icon3.png.jpg"
+                    alt="San Francisco, CA"
+                    class="inline-block w-6 h-6 mr-2"
+                  />
+                  San Francisco, CA
+                </li>
+                <li>
+                  <img
+                    src="./img/icon4.png.jpg"
+                    alt="New York, NY"
+                    class="inline-block w-6 h-6 mr-2"
+                  />
+                  Los Angeles, CA
+                </li>
+              </ul>
+                <ul class="text-gray-600 space-y-1">
+                    <li>
+                        <img
+                          src="./img/icon1.png.jpg"
+                          alt="Los Angeles, CA"
+                          class="inline-block w-6 h-6 mr-2 rounded-lg boder-gray-700"
+                        />
+                        New York, NY
+                      </li>
+                      <li>
+                        <img
+                          src="./img/icon2.png.jpg"
+                          alt="Seattle, WA"
+                          class="inline-block w-6 h-6 mr-2"
+                        />
+                        Seattle, WA
+                      </li>
+                </ul>
+          </div>
+        </div>
+      </div>
+      <hr class="border-t border-[#CACACA]">
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-6">
+      <div class="text-center text-gray-600">
+        Copyright © Delivery X | Designed by <span class="text-[#FF5634]">BRIX Templates</span> - Powered by <span class="text-[#FF5634]">Webflow</span>
+      </div>
+    </footer>
+    <script>
+      // JavaScript to toggle mobile menu
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+    </script>
+  </body>
+</html>
