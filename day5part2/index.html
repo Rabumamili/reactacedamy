@@ -1,70 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="gcontainer ">
-    <div class="gcard">
-        <!-- Overlay -->
-        <div class="goverlay"></div>
-    
-        <!-- Image -->
-        <img src="original (1).png" alt="" class="glogo">
-        <div class="gtext-container">
-            <p class="gtitle">Service Panel</p>
-            <p class="gdescription">
-                Streamline your restaurant operations with BMS. Manage reservations, orders, inventory, and staff effortlessly, and focus on delivering exceptional dining experiences.
-            </p>
-        </div>
+    <div class="auth-container">
+       <div class="mobile-logo"> <img  src="Logo (1).png" alt="mobile-logo" class="logo-sm"><img src="Brand.png" alt="brand"></div>
+       <b class="mobile-title">Service Panel</b>
+        <table class="auth-wrapper">
+            <tr class="auth-layout">
+                <!-- Left side image section -->
+                <td class="auth-hero-section">
+                    <div class="auth-hero-content">
+                        <img class="brand-logo" src="Logo.png" alt="logo">
+                        <h2 class="hero-heading">Service Panel</h2>
+                        <p class="hero-text">Streamline your restaurant operations with BMS. Manage reservations, orders, inventory, and staff effortlessly, and focus on delivering exceptional dining experiences.</p>
+                    </div>
+                </td>
+                <!-- Right side form -->
+                <td class="auth-form-section">
+                    <div class="auth-form-content">
+                        <h3>Welcome Back</h3>
+                        <p class="form-subtitle">Manage, streamline, and thrive effortlessly.</p>
+                        <form action="OTP.html" method="post">
+                            <label class="form-label">Email</label>
+                            <input type="email" id="emailInput" placeholder="Enter your Email" required><br>
+                            <label class="form-label">Password</label>
+                            <div class="password-wrapper">
+                                <input type="password" id="passwordInput" placeholder="••••••••" required>
+                                <span><img class="toggle-password" src="Vector.png"></span>
+                            </div>
+                            <div class="form-options">
+                                <label class="remember-me">
+                                    <input class="styled-checkbox" type="checkbox" name="rememberMe"> Remember me
+                                </label>
+                                <a href="#">Login with Code</a>
+                            </div>
+                            <button type="submit" id="submitBtn" class="auth-submit-btn">Sign In</button>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+        </table>
     </div>
+    <script>
+        const emailInput = document.getElementById('emailInput');
+        const passwordInput = document.getElementById('passwordInput');
+        const submitBtn = document.getElementById('submitBtn');
+        
+        function updateButtonState() {
+            if(emailInput.value && passwordInput.value) {
+                submitBtn.style.backgroundColor = '#000';
+                submitBtn.style.color = '#fff';
+            } else {
+                submitBtn.style.backgroundColor = 'rgba(0, 0, 0, 0.05)';
+                submitBtn.style.color = 'rgba(0, 0, 0, 0.4)';
+            }
+        }
 
-    <div class="formContainer">
-        <div class="form">
-            <form action="">
-              <div class="welcome-message"> <!--  Welcome Message -->
-                <h2>Welcome Back</h2>
-                <p>Manage, streamline, and thrive effortlessly.</p>
-              </div>
-              <div class="form_bottom"> 
-                <div class="email-field">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" name="email" placeholder="samsmith@gmail.com">
-                </div>
-                <div class="password-field">
-                  <label for="password">Password</label>
-                  <div class="password-field_input">
-                    <input type="password" id="password" name="password" placeholder="••••••••">
-                    <span>
-                      <img src="./Vector.png" alt="show password">
-                    </span>
-                  </div>
-                </div>
-      
-                <div class="checkbox_login-link"> <!--  Remember me checkbox and login option -->
-                  <div class="remember-me">
-                    <input type="checkbox" id="remember-me" name="remember-me">
-                    <label for="remember-me">Remember me</label>
-                  </div>
-                  <div class="login">
-                    <a href="#">Login with Code</a>
-                  </div>
-                </div>
-                <button type="submit"> Sign In</button>
-              </div>
-            </form>
-          </div>
-
-    </div>
-
-    
-</div>
-    
+        emailInput.addEventListener('input', updateButtonState);
+        passwordInput.addEventListener('input', updateButtonState);
+    </script>
 </body>
 </html>
-
