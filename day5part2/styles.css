@@ -101,9 +101,10 @@ body {
 }
 
 .auth-form-content {
+  padding: 169px, 267px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
   max-width: 360px;
   width: 100%;
 }
