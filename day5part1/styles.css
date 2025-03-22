@@ -4,16 +4,16 @@
     box-sizing: border-box;
 }
 
-.gcontainer{
+.container{
     width: 500px;
     height: 822px;
     background: linear-gradient(to bottom, #FEF4F2, #FFEAE6);
     margin: 100px auto;
     display: flex;
-justify-content: center;
+    justify-content: center;
     align-items: center;
 }
-.gcard{
+.card{
     position: relative;
     width: 480px;
     height: 802px;
@@ -21,40 +21,44 @@ justify-content: center;
     background-image: url("./image.png");
     background-size: cover;
     background-position: center;
-    padding-top: 32px;
-    padding-left: 24px;
+    padding: 40px;
 }
-.goverlay{
+.overlay{
     position: absolute;
-    background: linear-gradient(to bottom, #FF5634 70%, #000000 100%); /* Extends the orange before fading to black */
+    background: #FF5634; 
     border-radius: 32px;
     inset: 0;
-    opacity: 0.5; /* Keeps the transparency effect */
+    opacity: 0.5; 
 }
-.glogo{
-    width: 164.05px;
-    height: 38.97px;
-    position: relative;
+.logo{
+    width: 170px;
+    height: 58.86px;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    
 }
-.gtext-container{
+.text-container{
     position:absolute;
     bottom: 40px;
     color: white;
     width: 400px;
     height: 160px;
+    gap: 24px;
 
 }
-.gtitle{
+.title{
     font-family: 'DM Sans', sans-serif;
     font-weight: 700;
     font-size: 64px;
     line-height: 56px;
-    margin-bottom: 24px;
+    
     letter-spacing: -0.03em;
 }
-.gdescription{
+.description{
     font-family: 'DM Sans', sans-serif;
     font-size: 16px;
     line-height: 20px;
+    margin-top: 24px;
 }
 
