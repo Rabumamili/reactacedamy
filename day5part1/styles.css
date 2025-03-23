@@ -44,9 +44,13 @@
     width: 400px;
     height: 160px;
     gap: 24px;
+   
+    
+
+
 
 }
-.title{
+.text-container h2{
     font-family: 'DM Sans', sans-serif;
     font-weight: 700;
     font-size: 64px;
@@ -54,7 +58,7 @@
     
     letter-spacing: -0.03em;
 }
-.description{
+.text-container p{
     font-family: 'DM Sans', sans-serif;
     font-size: 16px;
     line-height: 20px;
