@@ -242,6 +242,8 @@ button:hover {
     font-style: italic;
  }
  .image_svg{
+   width: 20px;
+   height: 20px;
     position: relative;
   top: 6px;
  }
