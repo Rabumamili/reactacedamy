@@ -29,6 +29,7 @@
     border-radius: 32px;
     inset: 0;
     opacity: 0.5; 
+    
 }
 .logo{
     width: 148px;
@@ -38,6 +39,7 @@
     
 }
 .text-container{
+  
     position:absolute;
     bottom: 40px;
     color: white;
