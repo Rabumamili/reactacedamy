@@ -109,13 +109,15 @@ html {
   .fullscreen-btn {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 4px;
+    height: 48px;
     padding: 8px 18px;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
+    border-radius: 48px;
     background: transparent;
     font-size: 14px;
     font-weight: 700;
+    line-height: 16px;
     cursor: pointer;
   }
   
