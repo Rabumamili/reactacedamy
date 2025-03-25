@@ -10,7 +10,7 @@ body {
   font-style: normal;
   background: linear-gradient(67.75deg, #FFFFFF 19.18%, #FFEBE7 75.31%);
   width: 100%;
-  min-height: 100vh;
+  max-height: 100vh;
   overflow-x: hidden;
   display: flex;
   justify-content: space-between;
@@ -47,7 +47,7 @@ body {
   background-color: #ff5524;
   width: 480px;
   max-width: 100%;
-  min-height: 300px;
+  max-height: 100vh;
 }
 
 .auth-hero-section::before {
@@ -68,7 +68,7 @@ body {
   display: flex;
   flex-direction: column;
   color: rgba(255, 255, 255, 1);
-  min-height: 100%;
+  max-height: 100vh;
 }
 
 .brand-logo {
@@ -150,6 +150,7 @@ body {
 }
 
 .toggle-password {
+  cursor: pointer;
   position: absolute;
   right: 15px;
   top: 23px;
