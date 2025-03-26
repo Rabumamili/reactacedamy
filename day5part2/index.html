@@ -1,188 +1,79 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
-    <style>
-        /* Modified CSS */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        html, body {
-            height: 100%;
-            overflow: hidden;
-        }
-
-        body {
-            font-family: "DM Sans", sans-serif;
-            background: linear-gradient(67.75deg, #FFFFFF 19.18%, #FFEBE7 75.31%);
-            display: flex;
-        }
-
-        .auth-container {
-            flex: 1;
-            display: flex;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .auth-wrapper {
-            flex: 1;
-            display: flex;
-            min-height: 100%;
-        }
-
-        .auth-layout {
-            flex: 1;
-            display: grid;
-            grid-template-columns: 40% 60%;
-            border-radius: 30px;
-            background: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .auth-hero-section {
-            background-image: url('Introduction.png');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            padding: 40px;
-            border-radius: 30px 0 0 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .auth-hero-section::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: rgba(255, 86, 52, 0.5);
-            border-radius: 30px 0 0 30px;
-        }
-
-        .auth-hero-content {
-            position: relative;
-            z-index: 2;
-            color: white;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .brand-logo {
-            width: 180px;
-            margin-bottom: auto;
-        }
-
-        .hero-heading {
-            font-size: 4vw;
-            font-weight: 700;
-            margin: 20px 0;
-            line-height: 1.2;
-        }
-
-        .hero-text {
-            font-size: 1.2vw;
-            line-height: 1.5;
-            max-width: 80%;
-            margin-bottom: auto;
-        }
-
-        .auth-form-section {
-            padding: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .auth-form-content {
-            width: 100%;
-            max-width: 400px;
-        }
-
-        /* Rest of your existing CSS styles */
-        /* ... (keep all your existing form styles as they are) ... */
-
-        @media (max-width: 1024px) {
-            .auth-layout {
-                grid-template-columns: 1fr;
-                min-height: 100vh;
-            }
-
-            .auth-hero-section {
-                display: none;
-            }
-
-            /* Keep your existing mobile styles */
-        }
-    </style>
-</head>
-<body>
-    <div class="auth-container">
-       <div class="mobile-logo"> <img  src="Logo (1).png" alt="mobile-logo" class="logo-sm"><img src="Brand.png" alt="brand"></div>
-       <b class="mobile-title">Service Panel</b>
-        <table class="auth-wrapper">
-            <tr class="auth-layout">
-                <!-- Left side image section -->
-                <td class="auth-hero-section">
-                    <div class="auth-hero-content">
-                        <img class="brand-logo" src="Logo.png" alt="logo">
-                        <h2 class="hero-heading">Service Panel</h2>
-                        <p class="hero-text">Streamline your restaurant operations with BMS. Manage reservations, orders, inventory, and staff effortlessly, and focus on delivering exceptional dining experiences.</p>
+<!DOCTYPE html>
+<html lang="en" class="w-full">
+    <head>
+        <meta charSet="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="index.css"/>
+        
+        <title>Landscape and Portrait Service Panels</title>
+    </head>
+    <body class="flex min-h-screen w-full flex-col flex-wrap bg-cover bg-no-repeat antialiased __className_d65c78">
+        <div role="region" aria-label="Notifications (F8)" tabindex="-1" style="pointer-events:none">
+            <ol tabindex="-1" class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]"></ol>
+        </div>
+        <div>
+            <div class="min-h-screen w-full flex flex-col lg:flex-row p-2 font-dm-sans">
+                <div class="hidden lg:flex lg:w-[40%] max-w-[480px] relative rounded-[var(--round-6)] overflow-hidden">
+                    <div class="absolute inset-0  bg-cover bg-top bg-no-repeat"><img src="Introduction.png" alt="" srcset="/Introduction.png" 
+                        class="w-full h-full object-cover"  style="aspect-ratio: 16/9;"> </div>
+                    <div class="absolute inset-0 bg-signIn"></div>
+                    <div class="absolute inset-0 h-[50%] opacity-60 self-end bg-[linear-gradient(180deg,rgba(0,0,0,0)_0%,#000_50%,#000_100%)]"></div>
+                    <div class="relative flex flex-col min-h-full w-full">
+                        <div class="p-6">
+                            <img alt="Logo" loading="lazy" width="164" height="39" decoding="async" data-nimg="1" style="color:transparent" srcSet="./Logo.webp 2x" src="Logo.png"/>
+                        </div>
+                        <div class="mt-auto p-6 text-white">
+                            <h1 class="text-[48px] md:text-[56px] lg:text-[64px] leading-[56px] tracking-[-0.03em] font-bold mb-6">Service Panel</h1>
+                            <p class="text-[14px] md:text-[16px] lg:text-[16px] leading-[24px] tracking-[-0.01em] font-normal">Streamline your restaurant operations with BMS. Manage reservations, orders, inventory, and staff effortlessly, and focus on delivering exceptional dining experiences.</p>
+                        </div>
                     </div>
-                </td>
-                <!-- Right side form -->
-                <td class="auth-form-section">
-                    <div class="auth-form-content">
-                        <h3>Welcome Back</h3>
-                        <p class="form-subtitle">Manage, streamline, and thrive effortlessly.</p>
-                        <form action="OTP.html" method="post">
-                            <label class="form-label">Email</label>
-                            <input type="email" id="emailInput" placeholder="Enter your Email" required><br>
-                            <label class="form-label">Password</label>
-                            <div class="password-wrapper">
-                                <input type="password" id="passwordInput" placeholder="••••••••" required>
-                                <button><img class="toggle-password" src="Vector.png"></button>
+                </div>
+                <div class="flex flex-col w-full lg:w-[60%] min-h-[inherit] lg:min-h-0">
+                    <div class="lg:hidden flex flex-col items-center pt-4">
+                        <div class="flex items-center space-x-2">
+                            <img alt="Logo" loading="lazy" width="53.2" height="38.97" decoding="async" data-nimg="1" style="color:transparent" src="Logo (1).png"/>
+                            <span class="text-[20px] md:text-[22px] lg:text-[24px] leading-[32px] tracking-[-0.02em] font-bold text-brand">Orderific</span>
+                        </div>
+                        <h2 class="text-[24px] md:text-[28px] lg:text-[32px] leading-[40px] tracking-[-0.03em] font-bold text-black-100 mt-2">Service Panel</h2>
+                    </div>
+                    <div class="flex-1 flex flex-col justify-center w-full max-w-[360px] mx-auto">
+                        <div class="text-center mb-4">
+                            <h1 class="text-[24px] md:text-[28px] lg:text-[32px] leading-[40px] tracking-[-0.03em] font-bold mb-2">Welcome Back</h1>
+                            <p class="text-[14px] md:text-[16px] lg:text-[16px] leading-[24px] tracking-[-0.01em] font-normal text-black/60">Manage, streamline, and thrive effortlessly.</p>
+                        </div>
+                        <form class="w-full space-y-4">
+                            <div class="space-y-2">
+                                <label class="text-[12px] md:text-[13px] lg:text-[13px] leading-[16px] font-bold text-black-60 pl-4 block">Email</label>
+                                <div class="relative w-full">
+                                    <input type="email" class="block w-full h-[48px] rounded-[30px] px-4 border border-[var(--border-black-10)] bg-[var(--white-background-60)] text-[var(--text-black-100)] placeholder:text-[var(--text-black-40)] focus:outline-none focus:border-black/20 focus-visible:outline-none focus-visible:border-black/20" placeholder="Enter email address" value=""/>
+                                </div>
                             </div>
-                            <div class="form-options">
-                                <label class="remember-me">
-                                    <input class="styled-checkbox" type="checkbox" name="rememberMe"> Remember me
-                                </label>
-                                <a href="#">Login with Code</a>
+                            <div class="space-y-2">
+                                <label class="text-[12px] md:text-[13px] lg:text-[13px] leading-[16px] font-bold text-black-60 pl-4 block">Password</label>
+                                <div class="relative">
+                                    <div class="relative w-full">
+                                        <input type="password" class="block w-full h-[48px] rounded-[30px] px-4 border border-[var(--border-black-10)] bg-[var(--white-background-60)] text-[var(--text-black-100)] placeholder:text-[var(--text-black-40)] focus:outline-none focus:border-black/20 focus-visible:outline-none focus-visible:border-black/20" placeholder="Password" value=""/>
+                                    </div>
+                                    <button type="button" class="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer">
+                                        <img alt="Hide password" loading="lazy" width="20" height="20" decoding="async" data-nimg="1" class="opacity-60 hover:opacity-100 transition-opacity" style="color:transparent" src="eyeoff.svg"/>
+                                    </button>
+                                </div>
                             </div>
-                            <button type="submit" id="submitBtn" class="auth-submit-btn">Sign In</button>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center">
+                                    <div class="relative inline-flex items-center">
+                                        <input type="checkbox" class="h-5 w-5 cursor-pointer border appearance-none rounded-md bg-black-10 border-[#E6E6E6] checked:bg-[#00a82d] checked:border-[#00A82D] focus:outline-none focus:ring-2 focus:ring-[#00A82D]/20 disabled:cursor-not-allowed disabled:opacity-50"/>
+                                    </div>
+                                    <label class="text-[14px] md:text-[16px] lg:text-[16px] leading-[24px] tracking-[-0.01em] font-normal text-gray-700 ml-2">Remember me</label>
+                                </div>
+                                <button type="button" class="font-dm-sans font-semibold text-black underline">Login with Code</button>
+                            </div>
+                            <button class="inline-flex items-center justify-center rounded-6 transition-colors hover:outline-black-10 hover:outline hover:outline-4 disabled:bg-black-5 disabled:text-black-40 disabled:outline-none h-[48px] text-[14px] md:text-[16px] lg:text-[16px] leading-[24px] tracking-[-0.01em] font-bold w-full py-3 px-4 rounded-[30px] mt-4 bg-black/5 text-black/40 cursor-not-allowed" disabled="" type="submit">Sign In</button>
                         </form>
                     </div>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <script>
-        const emailInput = document.getElementById('emailInput');
-        const passwordInput = document.getElementById('passwordInput');
-        const submitBtn = document.getElementById('submitBtn');
-        
-        function updateButtonState() {
-            if(emailInput.value && passwordInput.value) {
-                submitBtn.style.backgroundColor = '#000';
-                submitBtn.style.color = '#fff';
-            } else {
-                submitBtn.style.backgroundColor = 'rgba(0, 0, 0, 0.05)';
-                submitBtn.style.color = 'rgba(0, 0, 0, 0)';
-            }
-        }
-
-        emailInput.addEventListener('input', updateButtonState);
-        passwordInput.addEventListener('input', updateButtonState);
-    </script>
-</body>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
